@@ -1,0 +1,18 @@
+---
+layout: default
+title: index
+---
+
+                    <h1>Welcome to cole.skoviak.com</h1>
+
+                    <div class="header_box"><h1>Recent blog entries: <span class="more">(<a href='/blog'>More</a>)</span></h1></div>
+
+                    <ul class="post">
+                        {% for post in site.posts limit 1 %}
+                        <li>
+                            <h2>{{ post.title }}</h2>
+                            <hr/>
+                            <p>{{ post.excerpt }}<a href="{{ post.url }}">Read more...</a></p> 
+                        </li>
+                        {% endfor %}
+                    </ul>
